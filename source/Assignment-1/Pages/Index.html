@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Course Registration Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Random.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <link href="../Content/CSS/home.css" rel="stylesheet" />
+
+
+</head>
+<body >
+
+<h3>Registration </h3>
+<br /> <br />
+
+<div class="row text-left">
+
+    <div class="col-sm-4">
+
+        <dl class="dl-vertical">
+            <dt>
+                Please Select Your Education<span style="color:red">*</span>
+            </dt>
+            <dd>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        --Select-- <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" id="education">
+                        <li><a class="dropdown-item" href="#">Bachelors</a></li>
+                        <li><a class="dropdown-item" href="#">Masters</a></li>
+                    </ul>
+                </div>
+            </dd>
+            <br />
+            <dt>
+                <label for="semter"> Please Select Your Semester <span style="color:red">*</span></label>
+            </dt>
+            <dd>
+                <div class="btn-group ">
+                    <button type="button" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        --Select-- <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" id="sem">
+                        <li><a class="dropdown-item" href="#">Spring</a></li>
+                        <li><a class="dropdown-item" href="#">Fall</a></li>
+                        <li><a class="dropdown-item" href="#">Summer</a></li>
+                    </ul>
+                </div>
+            </dd>
+            <br />
+            <dt>
+                <label for="carOption">Please Select Your Career Option<span style="color:red">*</span></label>
+            </dt>
+            <dd>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        --Select-- <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" id="career_option">
+                        <li><a class="dropdown-item" href="#">Computer Science</a></li>
+                        <li><a class="dropdown-item" href="#">Law</a></li>
+                    </ul>
+                </div>
+            </dd>
+
+        </dl>
+
+        <div id="error" style="margin-left:40px;color:red"></div>
+        <div id="new"><button class="btn btn-success btn-sm" style="margin-left:130px" id="Submit">Submit</button>
+        </div>
+    </div>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-hover table-striped" id="availableClasses" style="width:100%;height:50px;">
+        <thead>
+        <tr>
+            <th>Course Description</th>
+            <th>Instructor</th>
+            <th>Prerequisites</th>
+            <th>Duration</th>
+            <th>Credit hours</th>
+
+            <th>Similar courses</th>
+            <th class="align-content-center">Image</th>
+            <th>URL</th>
+            <th>Rating</th>
+            <th>Reviews</th></tr>
+        </thead>
+        <tbody>
+        <tr id="appie">
+            <td>DAA</td>
+            <td>Appie Van De Liefvoort</td>
+            <td>Data Structure</td>
+            <td>Friday 3:00PM - 6:00PM</td>
+            <td>3.00</td>
+            <td>
+                <ul>
+                    <li><a href="https://www.coursera.org/courses">CourseraDS</a></li>
+                </ul>
+            </td>
+            <td align="center">
+
+                <a href="CourseRegistration.html"> <img src="../Images/reg.jpg" height="100" width="100" /> </a></td>
+            <td><a href="CourseRegistration.html">Registration URL</a> </td>
+            <td>5</td>
+            <td>Review About the Course</td>
+        </tr>
+        <tr id="rao">
+            <td>Principles of Big Data Management </td>
+            <td>Praveen Rao</td>
+            <td>Big Data</td>
+            <td>Monday&Wednesday 4:00PM - 5:15PM</td>
+
+            <td>3</td>
+            <td>
+                <ul>
+                    <li><a href="https://www.coursera.org/specializations">CourseraBigData</a></li>
+                </ul>
+            </td>
+            <td align="center">
+                <a href="CourseRegistration.html"> <img src="../Images/reg.jpg" height="100" width="100" /> </a>
+            </td>
+            <td><a href="CourseRegistration.html">Registraation URL</a> </td>
+            <td>4.00</td>
+            <td>Review About the Course</td>
+        </tr>
+        <tr id="lee">
+            <td>Advanced Software Engineering </td>
+            <td>Lee</td>
+            <td>SE</td>
+            <td>3.00</td>
+            <td>Tuesday&Thursday 2:30PM - 3:45PM</td>
+            <td>
+                <ul>
+                    <li><a href="https://www.coursera.org/specializations">CourseraASE</a></li>
+
+                </ul>
+            </td>
+            <td align="center">
+                <a href="CourseRegistration.html"><img src="../Images/reg.jpg" height="100" width="100" /></a>
+            </td>
+            <td><a href="CourseRegistration.html">Registration URL</a> </td>
+            <td>4.5</td>
+            <td>Review About the Course</td>
+
+        </tr>
+        <tr id="chai">
+            <td>Cloud Computing </td>
+            <td>chai</td>
+            <td>NA-1</td>
+            <td>3.00</td>
+            <td>Tuesday&Friday 2:00-5:00</td>
+
+            <td>
+                <ul>
+                    <li><a href="https://www.coursera.org/specializations">Coursera CloudComputing</a></li>
+
+                </ul>
+            </td>
+            <td align="center">
+                <a href="CourseRegistration.html"><img src="../Images/reg.jpg" height="100" width="100" /></a>
+            </td>
+            <td><a href="CourseRegistration.html">Registration URL</a> </td>
+            <td>4.5</td>
+            <td>Review About the Course</td>
+
+        </tr>
+
+        </tbody>
+    </table>
+
+    <script src="../Scripts/Pages/Index.js"></script>
+</div>
+</body>
+</html>
