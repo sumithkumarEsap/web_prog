@@ -7,16 +7,16 @@
     <script src="todo.js"></script>
 </head>
 
-<body ng-app='toDoList' ng-controller='toDoListCtrl'>
+<body ng-app='todoApp' ng-controller='todoController'>
 
 
-<div class='input-form'>
-    <input type='text' ng-model='newTask' />
-    <button ng-click='addTask(newTask)'>Add</button>
-</div>
-<div class="new" ng-repeat='task in taskList'>
-    <input type='checkbox' ng-model='task.done' />
-    <span ng-class='{done: task.done}'>{{task.task}}</span>
+<div ng-app="todoApp" ng-controller="todoController">
+    <form ng-submit="add()">
+        <input ng-model="title"><button>Add</button>
+    </form>
+    <ul>
+        <li ng-repeat="t in tasks track by $index">{{ t }} <button ng-click="delete()">x</button></li>
+    </ul>
 </div>
 
 </body>
