@@ -1,0 +1,19 @@
+
+table {
+    margin: 10px;
+    border: black 1px solid;
+                      }
+tr {
+    margin: 2px;
+}
+td {
+    border: black 1px solid;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 14px;
+}
+.winning {
+    background-color: blue;
+    color: white;
+}
